@@ -19,3 +19,9 @@ Read ```file.txt``` line by line and search for exact matches.
 ```
 grep -w EXACTMATCH FILE
 ```
+
+Get unique lines:
+
+```
+uniq FILE
+```
