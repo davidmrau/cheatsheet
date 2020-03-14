@@ -20,8 +20,17 @@ Read ```file.txt``` line by line and search for exact matches.
 grep -w EXACTMATCH FILE
 ```
 
-Get unique lines:
+Get **subsequent** unique lines:
 
 ```
 uniq FILE
+```
+
+
+## Python
+
+create empy 2D-list correctly.
+
+```
+[[] for i in range(N)] != [[]]*N
 ```
