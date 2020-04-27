@@ -44,11 +44,10 @@ Remove leading and trailing whitespaces
 awk '{$1=$1};1' filename
 ```
 
-
-lines that are `filename_A` but not in `filename_B`
+Show lines that only exist in file `filename_A`:
 
 ```
-awk 'NR==FNR{a[$0];next} !($0 in a)' filename_A filename_B
+comm -23 filename_A filename_B
 ```
 
 first column of file
