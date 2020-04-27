@@ -51,6 +51,12 @@ lines that are `filename_A` but not in `filename_B`
 awk 'NR==FNR{a[$0];next} !($0 in a)' filename_A filename_B
 ```
 
+first column of file
+
+```
+cut -f1 filename
+```
+
 ## Python
 
 create empy 2D-list correctly.
