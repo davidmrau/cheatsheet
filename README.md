@@ -3,21 +3,21 @@
 
 ## Bash
 
-Read ```file.txt``` line by line and apply command to each line.
+Read file line by line and apply command to each line.
 ```
-cat file.txt | xargs -I{} command {} 
+cat filename | xargs -I{} command {} 
 ```
 
 Go to FOLDER and execute command in FOLDER
 
 ```
-cd FOLDER && command
+cd folder && command
 ```
 
 Read ```file.txt``` line by line and search for exact matches.
 
 ```
-grep -w EXACTMATCH FILE
+grep -w exactmatch filename
 ```
 
 Get **subsequent** unique lines:
@@ -30,6 +30,18 @@ Merge all files (also in subfolders) into one file
 
 ```
 find . -type f | xargs cat > file
+```
+
+Remove empty lines
+
+```
+awk 'NF' filename
+```
+
+Remove leading and trailing whitespaces
+
+```
+awk '{$1=$1};1'
 ```
 
 ## Python
