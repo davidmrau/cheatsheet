@@ -44,6 +44,13 @@ Remove leading and trailing whitespaces
 awk '{$1=$1};1' filename
 ```
 
+
+lines that are `filename_A` but not in `filename_B`
+
+```
+awk 'NR==FNR{a[$0];next} !($0 in a)' filename_A filename_B
+```
+
 ## Python
 
 create empy 2D-list correctly.
