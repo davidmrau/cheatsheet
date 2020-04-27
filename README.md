@@ -8,7 +8,7 @@ Read file line by line and apply command to each line.
 cat filename | xargs -I{} command {} 
 ```
 
-Go to FOLDER and execute command in FOLDER
+Go to FOLDER and execute command in folder
 
 ```
 cd folder && command
@@ -23,13 +23,13 @@ grep -w exactmatch filename
 Get **subsequent** unique lines:
 
 ```
-uniq FILE
+uniq filename
 ```
 
 Merge all files (also in subfolders) into one file
 
 ```
-find . -type f | xargs cat > file
+find . -type f | xargs cat > filename
 ```
 
 Remove empty lines
@@ -41,7 +41,7 @@ awk 'NF' filename
 Remove leading and trailing whitespaces
 
 ```
-awk '{$1=$1};1'
+awk '{$1=$1};1' filename
 ```
 
 ## Python
