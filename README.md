@@ -26,6 +26,11 @@ Get **subsequent** unique lines:
 uniq FILE
 ```
 
+Merge all files (also in subfolders) into one file
+
+```
+find . -type f | xargs cat > file
+```
 
 ## Python
 
