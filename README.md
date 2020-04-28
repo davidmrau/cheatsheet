@@ -1,6 +1,14 @@
 # cheatsheet
 
 
+## Linux
+
+Set reading and execution rights to user recursively for folder
+
+```
+setfacl -R -m u:username:r-x folder
+```
+
 ## Bash
 
 Read file line by line and apply command to each line.
