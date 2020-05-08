@@ -71,3 +71,12 @@ create empy 2D-list correctly.
 ```
 [[] for i in range(N)] != [[]]*N
 ```
+
+access None in tuple does not return None
+
+```
+>>> a
+(1, 2, None)
+>>> a[2]
+``
+>>>
