@@ -64,6 +64,19 @@ first column of file
 cut -f1 filename
 ```
 
+
+Dowload file (FILEID) from google drive to FILENAME
+
+
+```
+fileId=FILEID
+fileName=FILENAME
+curl -sc cookie "https://drive.google.com/uc?export=download&id=${fileId}" > /dev/null
+code="$(awk '/_warning_/ {print $NF}' cookie)"
+curl -Lb cookie "https://drive.google.com/uc?export=download&confirm=${code}&id=${fileId}" -o ${fileN
+ame}
+```
+
 ## Python
 
 create empy 2D-list correctly.
