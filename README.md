@@ -77,6 +77,11 @@ curl -Lb cookie "https://drive.google.com/uc?export=download&confirm=${code}&id=
 ame}
 ```
 
+Get random lines in sequence from file with probability p
+```
+perl -ne 'print if (rand() < p)' file.csv
+```
+
 ## Python
 
 create empy 2D-list correctly.
