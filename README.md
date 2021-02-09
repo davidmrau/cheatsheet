@@ -82,6 +82,11 @@ Get random lines in sequence from file with probability p
 perl -ne 'print if (rand() < p)' file.csv
 ```
 
+find each line of file1 in first column of file2
+```
+awk 'NR == FNR { line[$0]; next } $1 in line { print $0 }' file1 file2
+```
+
 ## Python
 
 create empy 2D-list correctly.
