@@ -87,6 +87,20 @@ find each line of file1 in first column of file2
 awk 'NR == FNR { line[$0]; next } $1 in line { print $0 }' file1 file2
 ```
 
+
+calculate average per over lines
+
+```
+awk '{x+=$0}END{print x/NR}' FILENAME
+```
+
+count number of CHAR
+
+
+```
+awk -F\CHAR '{print NF-1}'
+```
+
 ## Python
 
 create empy 2D-list correctly.
