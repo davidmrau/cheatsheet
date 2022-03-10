@@ -101,6 +101,14 @@ count number of CHAR
 awk -F\CHAR '{print NF-1}'
 ```
 
+
+Print column 5 of tab separated file
+
+```
+awk 'BEGIN{ FS=OFS="\t" }{ print $5 }' FILE
+```
+
+
 ## Python
 
 create empy 2D-list correctly.
