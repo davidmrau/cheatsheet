@@ -125,3 +125,20 @@ access None in tuple does not return None
 >>> a[2]
 >>>
 ```
+
+# PyPlot
+
+## legend to separate file
+
+```
+plt.figure()
+label_params = ax.get_legend_handles_labels() 
+plt.tight_layout() 
+    
+plt.savefig(f'without_legend.pdf')
+figl, axl = plt.subplots(figsize=(3,2.4))
+axl.axis(False)
+axl.legend(*label_params, loc='center left')
+plt.tight_layout() 
+plt.savefig(f'first_last.pdf')
+```
