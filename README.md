@@ -131,7 +131,7 @@ access None in tuple does not return None
 ## legend to separate file
 
 ```
-plt.figure()
+fig,ax = plt.subplots()
 label_params = ax.get_legend_handles_labels() 
 plt.tight_layout() 
     
