@@ -9,6 +9,11 @@ Set reading and execution rights to user recursively for folder
 setfacl -R -m u:username:r-x folder
 ```
 
+Convert text document to utf-8
+
+```
+vim --clean -E -s -c 'argdo set fileencoding=utf-8 nobomb | update' -c q -- file_name
+```
 ## Bash
 
 Read file line by line and apply command to each line.
